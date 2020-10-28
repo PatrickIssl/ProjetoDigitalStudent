@@ -28,7 +28,7 @@ server
 .get('/', pages.index)
 .get('/orphanage', pages.orphanage)
 .get('/orphanages', pages.orphanages)
-.get('/create-orphanage', pages.createOrphanage)
+.get('/create-school', pages.createschool)
 .post('/save-orphanage', pages.saveOrphanage)
 
 //ligar o servidor

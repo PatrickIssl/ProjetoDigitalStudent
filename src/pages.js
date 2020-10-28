@@ -40,8 +40,8 @@ module.exports = {
             return res.send('erro no banco de dados!')
         }
     },
-    createOrphanage(req,res){
-        return res.render('create-orphanage')
+    createschool(req,res){
+        return res.render('create-school')
     },
     async saveOrphanage(req,res){
         const fields = req.body
