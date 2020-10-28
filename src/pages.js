@@ -1,5 +1,5 @@
 const Database = require('./database/db.js')
-const saveOrphanage = require('./database/saveOrphanage');
+const saveSchool = require('./database/saveSchool');
 
 module.exports = {
 
@@ -43,7 +43,7 @@ module.exports = {
     createschool(req,res){
         return res.render('create-school')
     },
-    async saveOrphanage(req,res){
+    async saveSchool(req,res){
         const fields = req.body
         //valida se os campos estão preenchidos 
         if(Object.values(fields).includes('')){
@@ -53,7 +53,7 @@ module.exports = {
         try{
         //salvar um orfanato
         const db = await Database
-        await saveOrphanage(db, {
+        await saveSchool(db, {
             lat: fields.lat,
             lng:fields.lng,
             name:fields.name,

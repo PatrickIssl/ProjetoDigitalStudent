@@ -19,7 +19,7 @@
       crossorigin=""
     ></script>
 
-    <link rel="icon" href="/images/logo-icon.png" />
+    <link rel="icon" href="/images/logo-icon.jpg" />
 
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/page-create-school.css" />
@@ -35,9 +35,9 @@
     />
   </head>
   <body>
-    <div id="page-create-orphanage">
+    <div id="page-create-school">
       <aside class="animate-right sidebar">
-        <img src="/images/map-marker.svg" alt="Happy" />
+        <img src="/images/logo-icon.jpg" alt="ads" id="img" />
 
         <footer>
           <button onclick="history.back()">
@@ -47,7 +47,7 @@
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <form action="save-orphanage" method="post" onSubmit="validate(event)">
+        <form action="save-school" method="post" onSubmit="validate(event)">
           <fieldset>
             <legend>Dados</legend>
 
@@ -117,6 +117,6 @@
       </main>
     </div>
 
-    <script src="/scripts/page-create-orphanage.js"></script>
+    <script src="/scripts/page-create-school.js"></script>
   </body>
 </html>

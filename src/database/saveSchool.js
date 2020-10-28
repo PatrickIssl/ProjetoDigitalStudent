@@ -1,4 +1,4 @@
-function saveOrphanage(db, orphanage){
+function saveSchool(db, orphanage){
     
     return db.run(` INSERT INTO orphanages(
         lat,
@@ -7,9 +7,7 @@ function saveOrphanage(db, orphanage){
         about,
         whatsapp,
         images,
-        instructions,
-        opening_hours,
-        open_on_weekends
+
     ) VALUES (
         "${orphanage.lat}",
         "${orphanage.lng}",
@@ -17,11 +15,9 @@ function saveOrphanage(db, orphanage){
         "${orphanage.about}",
         "${orphanage.whatsapp}",
         "${orphanage.images}",
-        "${orphanage.instructions}",
-        "${orphanage.opening_hours}",
-        "${orphanage.open_on_weekends}"
+ 
     );
 `);
 }
 
-module.exports= saveOrphanage;
+module.exports= saveSchool;

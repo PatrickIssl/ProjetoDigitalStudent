@@ -29,7 +29,7 @@ server
 .get('/orphanage', pages.orphanage)
 .get('/orphanages', pages.orphanages)
 .get('/create-school', pages.createschool)
-.post('/save-orphanage', pages.saveOrphanage)
+.post('/save-school', pages.saveSchool)
 
 //ligar o servidor
 server.listen(5500)
