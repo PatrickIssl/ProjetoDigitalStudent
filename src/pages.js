@@ -6,35 +6,35 @@ module.exports = {
     index(req,res){
         return res.render('index')
     },
-    async orphanage(req,res){ 
+    async school(req,res){ 
         const id = req.query.id
         
 
         try{
             const db = await Database;
-            const results = await db.all(`SELECT * FROM orphanages WHERE id = "${id}" `)
-            const orphanage = results[0]
+            const results = await db.all(`SELECT * FROM schools WHERE id = "${id}" `)
+            const school = results[0]
 
-            orphanage.images = orphanage.images.split(",")
-            orphanage.firstImage = orphanage.images[0]
+            school.images = school.images.split(",")
+            school.firstImage = school.images[0]
             
-            if(orphanage.open_on_weekends == "0"){  
-                orphanage.open_on_weekends = false
+            if(school.open_on_weekends == "0"){  
+                school.open_on_weekends = false
             }else{
-                orphanage.open_on_weekends = true
+                school.open_on_weekends = true
             }
 
-            return res.render('orphanage',{orphanage: orphanage})
+            return res.render('school',{school: school})
         }catch{
             console.log(error)
             return res.send('Erro de banco de dados!')
         }
     },
-    async orphanages(req,res){
+    async schools(req,res){
         try{
             const db = await Database;
-            const orphanages =await db.all("SELECT * FROM orphanages")
-            return res.render('orphanages',{orphanages})
+            const schools =await db.all("SELECT * FROM schools")
+            return res.render('schools',{schools})
         }catch(error){
             console.log(error)
             return res.send('erro no banco de dados!')
@@ -55,17 +55,14 @@ module.exports = {
         const db = await Database
         await saveSchool(db, {
             lat: fields.lat,
-            lng:fields.lng,
+            lng: fields.lng,
             name:fields.name,
             about:fields.about,
             whatsapp:fields.whatsapp,
             images:fields.images.toString(),
-            instructions:fields.instructions,
-            lng:fields.opening_hours,
-            lng:fields.open_on_weekends,
         })
 
-        return res.redirect('/orphanages')
+        return res.redirect('/schools')
         }catch(error){
             console.log(error)
             return res.send('erro no banco de dados!')

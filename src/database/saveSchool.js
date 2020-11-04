@@ -1,21 +1,21 @@
-function saveSchool(db, orphanage){
+
+function saveSchool(db, school){
     
-    return db.run(` INSERT INTO orphanages(
+    return db.run(` INSERT INTO schools(
         lat,
         lng,
         name,
         about,
         whatsapp,
-        images,
-
+        images
     ) VALUES (
-        "${orphanage.lat}",
-        "${orphanage.lng}",
-        "${orphanage.name}",
-        "${orphanage.about}",
-        "${orphanage.whatsapp}",
-        "${orphanage.images}",
- 
+        "${school.lat}",
+        "${school.lng}",
+        "${school.name}",
+        "${school.about}",
+        "${school.whatsapp}",
+        "${school.images}"
+
     );
 `);
 }

@@ -26,8 +26,8 @@ server
 
 //rotas da aplicação
 .get('/', pages.index)
-.get('/orphanage', pages.orphanage)
-.get('/orphanages', pages.orphanages)
+.get('/school', pages.school)
+.get('/schools', pages.schools)
 .get('/create-school', pages.createschool)
 .post('/save-school', pages.saveSchool)
 

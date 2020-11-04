@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{orphanage.name}}| Happy</title>
+  <title>{{school.name}}| Happy</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -18,7 +18,7 @@
   <link rel="icon" href="/images/logo-icon.png" />
 
   <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/page-orphanage.css" />
+  <link rel="stylesheet" href="/css/page-school.css" />
   <link rel="stylesheet" href="/css/animations.css" />
   <link rel="stylesheet" href="/css/sidebar.css" />
   <link rel="stylesheet" href="/css/map.css" />
@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  <div id="page-orphanage">
+  <div id="page-school">
     <aside class="animate-right sidebar">
 
       <img src="/images/map-marker.svg" alt="Happy">
@@ -43,29 +43,29 @@
     </aside>
 
     <main class="animate-appear with-sidebar">
-      <div class="orphanage-details">
-        <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}" />
+      <div class="school-details">
+        <img src="{{school.firstImage}}" alt="{{school.name}}" />
 
         <div class="images">
-          {{#each orphanage.images}}
+          {{#each school.images}}
           <button onclick="selectImage(event)" class="active" type="button">
-            <img src="{{this}}" alt="{{orphanage.name}}" />
+            <img src="{{this}}" alt="{{school.name}}" />
           </button>
           {{/each}}
         </div>
-        <div class="orphanage-details-content">
-          <h1>{{orphanage.name}}</h1>
+        <div class="school-details-content">
+          <h1>{{school.name}}</h1>
           <p>
 
-            {{orphanage.about}}
+            {{school.about}}
           </p>
 
           <div class="map-container">
             <div id="mapid"></div>
-            <span data-lat={{orphanage.lat}} data-lng={{orphanage.lng}}></span>
+            <span data-lat={{school.lat}} data-lng={{school.lng}}></span>
 
             <footer>
-              <a target="_blank" href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=15">Ver
+              <a target="_blank" href="https://maps.google.com/mobile?q={{school.lat}},{{school.lng}}&z=15">Ver
                 rotas no Google Maps</a>
             </footer>
           </div>
@@ -73,15 +73,15 @@
 
           <h2>Instruções para visita</h2>
           <p>
-            {{orphanage.instructions}}
+            {{school.instructions}}
           </p>
 
           <div class="open-details">
             <div class="hour">
               <img src="/images/clock.svg" alt="Horários" />
-              {{orphanage.opening_hours}}
+              {{school.opening_hours}}
             </div>
-            {{#if orphanage.open_on_weekends}}
+            {{#if school.open_on_weekends}}
             <div class="open-on-weekends open">
               <img src="/images/info.svg" alt="Informações" />
               Atendemos fim de semana
@@ -94,7 +94,7 @@
             {{/if}}
           </div>
 
-          <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}&text=oi, quero conversar sobre visitas no {{orphanage.name}}" target="_blank"
+          <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{school.whatsapp}}&text=oi, quero conversar sobre visitas no {{school.name}}" target="_blank"
             class="primary-button" type="button">
             <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
             Entrar em contato
@@ -104,7 +104,7 @@
     </main>
   </div>
 
-  <script src="/scripts/page-orphanage.js"></script>
+  <script src="/scripts/page-school.js"></script>
 </body>
 
 </html>

@@ -94,7 +94,8 @@ function toggleSelect(event){
 
 function validate(event){
     const latnull = document.querySelector('[name = "lat"]')
-    if(latnull.value==""){
+    const lngnull = document.querySelector('[name = "lng"]')
+    if(latnull.value=="" ||lngnull.value=="" ){
         event.preventDefault()
         alert("selecione um local no mapa")
     }

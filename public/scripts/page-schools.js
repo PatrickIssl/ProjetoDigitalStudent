@@ -20,7 +20,7 @@ function addMarker({id, name, lat, lng}){
         className:"map-popup",
         minWidth:"240",
         minheight:"240"
-    }).setContent(` ${name} <a href="orphanage?id=${id}"> <img src = "/images/arrow-white.svg"></a>`)
+    }).setContent(` ${name} <a href="school?id=${id}"> <img src = "/images/arrow-white.svg"></a>`)
 
     //criar e adicionar marcador
     L.marker([lat,lng],{icon})
@@ -30,15 +30,15 @@ function addMarker({id, name, lat, lng}){
 
 }
 
-const orphanagesSpan = document.querySelectorAll('.orphanages span');
+const schoolsSpan = document.querySelectorAll('.schools span');
 
-orphanagesSpan.forEach( span=>{
-    const orphanage = {
+schoolsSpan.forEach( span=>{
+    const school = {
         id: span.dataset.id,
         name: span.dataset.name,
         lat: span.dataset.lat,
         lng: span.dataset.lng
     }
 
-    addMarker(orphanage)
+    addMarker(school)
 })

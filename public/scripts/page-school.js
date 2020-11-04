@@ -47,7 +47,7 @@ function selectImage(event){
 
     //selecionar a imagem clicada
     const image = button.children[0]
-    const imageContainer = document.querySelector(".orphanage-details > img")
+    const imageContainer = document.querySelector(".school-details > img")
     //atualizar o container de imagem
     imageContainer.src = image.src
 
