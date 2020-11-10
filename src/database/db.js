@@ -11,6 +11,18 @@ function execute(db){
             whatsapp TEXT,
             images TEXT
         );
+        CREATE TABLE IF NOT EXISTS users(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            images TEXT,
+            nome TEXT,
+            CPF TEXT,
+            email TEXT,
+            telefone TEXT,
+            nacimento TEXT,
+            cargo INTEGER,
+            endereco TEXT,
+            uf TEXT
+        );
     `)
     
 }

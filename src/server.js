@@ -31,6 +31,7 @@ server
 .get('/create-school', pages.createschool)
 .post('/save-school', pages.saveSchool)
 .get('/create-user', pages.createuser)
+.post('/save-user', pages.saveUser)
 
 
 //ligar o servidor

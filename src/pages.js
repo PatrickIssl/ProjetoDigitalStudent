@@ -1,5 +1,6 @@
 const Database = require('./database/db.js')
 const saveSchool = require('./database/saveSchool');
+const saveUser = require('./database/saveUser');
 
 module.exports = {
 
@@ -70,5 +71,35 @@ module.exports = {
             console.log(error)
             return res.send('erro no banco de dados!')
         }
+    },
+
+    async saveUser(req,res){
+        const fields = req.body
+        //valida se os campos estão preenchidos 
+        if(Object.values(fields).includes('')){
+            return res.send('Todos os campos devem ser preenchidos!')
+        }
+
+        try{
+        //salvar um orfanato
+        const db = await Database
+        await saveUser(db, {
+            images:fields.images.toString(),
+            nome:fields.name,
+            CPF:fields.cpf,
+            email:fields.email,
+            telefone:fields.telefone,
+            nacimento:fields.date,
+            cargo:fields.cargo,
+            endereco:fields.endereco,
+            uf:fields.uf,
+        })
+
+        return res.redirect('/schools')
+        }catch(error){
+            console.log(error)
+            return res.send('erro no banco de dados!')
+        }
     }
+
 }
