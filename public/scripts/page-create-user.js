@@ -1,32 +1,4 @@
 
-//criar mapa
-const map = L.map('mapid').setView([-24.9574377,-53.4654961], 15);
-
-//criar e adicionar tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', ).addTo(map);
-
-//criar icone
-const icon= L.icon({ iconUrl:"/images/map-marker.svg",
-iconSize:[58, 68],
-iconAnchor:[29, 68]})
-
-//cria e adiciona marcador no mapa
-let marker;
-map.on('click',(event) => {
-    const lat = event.latlng.lat;
-    const lng = event.latlng.lng;
-    
-    document.querySelector('[name=lat]').value = lat;
-    document.querySelector('[name=lng]').value = lng;
-
-    //remove icon layers
-    marker && map.removeLayer(marker)
-
-    //add icon layer
-    marker = L.marker([lat, lng] , {icon})
-    .addTo(map)
-
-})
 
 // adicionar o campo de fotos
 
@@ -69,6 +41,7 @@ function deleteField(event){
         //limpar o valor do campo
         span.parentNode.children[0].value = ""
         return
+        
     }   
 
     //deletar o campo
@@ -78,12 +51,7 @@ function deleteField(event){
 
 
 
-function validate(event){
-    const latnull = document.querySelector('[name = "lat"]')
-    const lngnull = document.querySelector('[name = "lng"]')
-    if(latnull.value=="" ||lngnull.value=="" ){
-        event.preventDefault()
-        alert("selecione um local no mapa")
-    }
+
+
   
-    }
+

@@ -5,7 +5,7 @@
     height: 6.4rem;
     border: none;
     cursor: pointer;
-    background:#3cdc8c;
+    background:#0082BE;
     border-radius:2rem;
     color: white;
     text-decoration: none;
@@ -16,7 +16,7 @@
 }
 
 .primary-button:hover {
-    background: #36cf82;
+    background: #015277;
 }
 
 .primary-button img{

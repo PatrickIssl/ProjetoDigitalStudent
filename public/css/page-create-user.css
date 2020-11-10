@@ -1,0 +1,14 @@
+#page-create-user{
+    display: flex;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+#img{
+    max-width: 98px;
+    max-height: 98px;
+}
+
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adicionar uma Escola| Happy</title>
+    <title>Adicionar um | Happy</title>
 
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
     <link rel="icon" href="/images/logo-icon.jpg" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/page-create-school.css" />
+    <link rel="stylesheet" href="/css/page-create-user.css" />
     <link rel="stylesheet" href="/css/animations.css" />
     <link rel="stylesheet" href="/css/sidebar.css" />
     <link rel="stylesheet" href="/css/map.css" />
@@ -35,7 +35,7 @@
     />
   </head>
   <body>
-    <div id="page-create-school">
+    <div id="page-create-user">
       <aside class="animate-right sidebar">
         <img src="/images/logo-icon.jpg" alt="ads" id="img" />
 
@@ -49,39 +49,9 @@
       <main class="animate-appear with-sidebar">
         <form action="save-school" method="post" onSubmit="validate(event)">
           <fieldset>
-            <legend>Dados</legend>
+            <legend>Usuário</legend>
 
-            <div class="map-container">
-              <div id="mapid"></div>
-
-              <input type="hidden" name="lat">
-              <input type="hidden" name="lng">
-
-              <footer>
-                <a href="#" id="select-point">
-                  Clique no mapa para adicionar a localização
-                </a>
-              </footer>
-            </div>
-
-            <div class="input-block">
-              <label for="name">Nome</label>
-              <input id="name" name="name" required/>
-            </div>
-
-            <div class="input-block">
-              <label for="about"
-                >Sobre <span> Máximo de 300 caracteres</span></label
-              >
-              <textarea name="about" id="about" required></textarea>
-            </div>
-
-            <div class="input-block">
-              <label for="whatsapp">Número de Whatsapp</label>
-              <input id="whatsapp" name="whatsapp" required/>
-            </div>
-
-            <div class="input-block images">
+              <div class="input-block images">
               <label for="images">foto</label>
 
               <div class="images-upload" id="images"s>
@@ -95,14 +65,49 @@
             
                 
               </div>
-
               
-
-
-              <button type="button" onclick = "addPhotoField()">
-                <img src="/images/add-file.svg" alt="Nova imagem" />
-              </button>
             </div>
+
+            <div class="input-block">
+              <label for="name">Nome</label>
+              <input id="name" name="name" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="cpf">CPF</label>
+              <input id="cpf" name="cpf" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="date">Data de Nacimento</label>
+              <input id="date" name="date" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="cargo">Cargo</label>
+              <input id="cargo" name="cargo" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="Endereco">Endereço</label>
+              <input id="endereco" name="endereco" required/>
+            </div>
+              <div class="input-block">
+              <label for="uf">UF</label>
+              <input id="uf" name="uf" required/>
+            </div>
+
+         
           </fieldset>
 
           <fieldset>
@@ -117,6 +122,6 @@
       </main>
     </div>
 
-    <script src="/scripts/page-create-school.js"></script>
+    <script src="/scripts/page-create-user.js"></script>
   </body>
 </html>

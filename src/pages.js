@@ -43,6 +43,9 @@ module.exports = {
     createschool(req,res){
         return res.render('create-school')
     },
+    createuser(req,res){
+        return res.render('create-user')
+    },
     async saveSchool(req,res){
         const fields = req.body
         //valida se os campos estão preenchidos 

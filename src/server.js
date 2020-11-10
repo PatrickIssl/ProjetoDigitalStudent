@@ -30,6 +30,8 @@ server
 .get('/schools', pages.schools)
 .get('/create-school', pages.createschool)
 .post('/save-school', pages.saveSchool)
+.get('/create-user', pages.createuser)
+
 
 //ligar o servidor
 server.listen(5500)
