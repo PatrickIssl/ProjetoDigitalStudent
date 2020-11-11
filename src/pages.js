@@ -7,6 +7,10 @@ module.exports = {
     index(req,res){
         return res.render('index')
     },
+    async login(req,res){
+        return res.render('login')
+    },
+
     async school(req,res){ 
         const id = req.query.id
         
@@ -93,6 +97,7 @@ module.exports = {
             cargo:fields.cargo,
             endereco:fields.endereco,
             uf:fields.uf,
+            uf:fields.senha,
         })
 
         return res.redirect('/schools')

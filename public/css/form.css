@@ -33,6 +33,10 @@ fieldset legend{
     margin-top:2.4rem;
 
 }
+.logo + .input-block{
+    margin-top:10.4rem;
+
+}
 
 .input-block label{
     color: #8FA7B3;
@@ -111,3 +115,7 @@ fieldset legend{
     cursor: pointer;
 }
 
+.lost-password{
+    margin-top:1.5rem;
+    margin-left:1.5rem;
+}

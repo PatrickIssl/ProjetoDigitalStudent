@@ -10,7 +10,8 @@ function saveUser(db, user){
         nacimento,
         cargo,
         endereco,
-        uf
+        uf,
+        senha
     ) VALUES (
         "${user.images}",
         "${user.nome}",
@@ -20,7 +21,8 @@ function saveUser(db, user){
         "${user.nacimento}",
         "${user.cargo}",
         "${user.endereco}",
-        "${user.uf}"
+        "${user.uf}",
+        "${user.senha}"
 
     );
 `);

@@ -21,7 +21,8 @@ function execute(db){
             nacimento TEXT,
             cargo INTEGER,
             endereco TEXT,
-            uf TEXT
+            uf TEXT,
+            senha TEXT
         );
     `)
     

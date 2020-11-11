@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login| ADS</title>
+
+
+    <link rel="icon" href="/images/logo-icon.jpg" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/page-login.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/buttons.css" />
+
+  </head>
+  <body>
+    <div id="page-create-user">
+
+      
+        <form action="login" method="post" onSubmit="validate(event)">
+          <fieldset>
+            <div class= "logo">
+                <img src="/images/logo-icon.jpg" alt="ads" />
+            </div>
+            
+            <div class="input-block">
+              <label for="cpf">CPF</label>
+              <input id="cpf" name="cpf" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="senha">Senha</label>
+              <input id="senha" type = "password" name="senha" required/>
+            </div>
+            <div class = "lost-password">
+              <a href="/">Esqueceu sua senha?</a>
+            </div>
+          
+          </fieldset>
+           
+          <fieldset>
+              <button type = "submit" class="primary-button">
+                Entrar
+              </button>
+
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
+    <script src="/scripts/page-login.js"></script>
+  </body>
+</html>

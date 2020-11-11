@@ -28,6 +28,7 @@ server
 .get('/', pages.index)
 .get('/school', pages.school)
 .get('/schools', pages.schools)
+.get('/login', pages.login)
 .get('/create-school', pages.createschool)
 .post('/save-school', pages.saveSchool)
 .get('/create-user', pages.createuser)
