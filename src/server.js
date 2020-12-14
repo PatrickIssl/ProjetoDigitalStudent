@@ -24,15 +24,19 @@ server
 .set('view engine','hbs')
 
 
-//rotas da aplicação
+//rotas da aplicação get
 .get('/', pages.index)
 .get('/school', pages.school)
 .get('/schools', pages.schools)
 .get('/login', pages.login)
 .get('/create-school', pages.createschool)
-.post('/save-school', pages.saveSchool)
 .get('/create-user', pages.createuser)
+
+
+//rotas da aplicação post
+.post('/save-school', pages.saveSchool)
 .post('/save-user', pages.saveUser)
+.post('/authentic', pages.authentic)
 
 
 //ligar o servidor

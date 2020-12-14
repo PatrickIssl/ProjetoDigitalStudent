@@ -27,7 +27,7 @@ Database.then(async db => {
 */
 
 
-  const selectedSchools =await db.all("SELECT * FROM schools")
+  const selectedSchools =await db.all('SELECT * FROM users WHERE CPF = "10157283917" AND senha = "douglasd"')
   console.log(selectedSchools) 
   
 })

@@ -1,6 +1,7 @@
-const Database = require('./database/db.js')
+const Database = require('./database/db.js');
 const saveSchool = require('./database/saveSchool');
 const saveUser = require('./database/saveUser');
+const authentic = require('./database/authentic');
 
 module.exports = {
 
@@ -10,7 +11,6 @@ module.exports = {
     async login(req,res){
         return res.render('login')
     },
-
     async school(req,res){ 
         const id = req.query.id
         
@@ -77,6 +77,39 @@ module.exports = {
         }
     },
 
+    //autentica usuario
+     async authentic(req,res){
+        const fields = req.body
+        //valida se os campos estão preenchidos 
+        if(Object.values(fields).includes('')){
+            return res.send('Todos os campos devem ser preenchidos!')
+        }
+
+        try{
+        //salvar um orfanato
+        const db = await Database
+        const user = await authentic(db, {
+            cpf:fields.cpf,
+            senha:fields.senha,
+        })
+
+
+        if(user == ""){
+            
+            return res.send('Login ou Senha Incorretos')
+
+        }else{
+            
+            return res.redirect('/principal') 
+
+        }
+        }catch(error){
+            console.log(error)
+            return res.send('erro no Login!')
+        }
+    },
+
+
     async saveUser(req,res){
         const fields = req.body
         //valida se os campos estão preenchidos 
@@ -97,7 +130,7 @@ module.exports = {
             cargo:fields.cargo,
             endereco:fields.endereco,
             uf:fields.uf,
-            uf:fields.senha,
+            senha:fields.senha,
         })
 
         return res.redirect('/schools')
